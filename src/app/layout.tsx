@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv" className={`${openSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="min-h-full flex flex-col antialiased text-main m-8">{children}</body>
     </html>
   );
 }
