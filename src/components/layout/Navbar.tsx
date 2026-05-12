@@ -193,11 +193,27 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
 
-        <button 
-         onClick={() => setMenuOpen(!menuOpen)}
-         className="text-gray-400 hover:text-white transition">
-          ☰
-        </button>
+
+   <button
+     onClick={() => setMenuOpen(!menuOpen)}
+     className="text-gray-400 hover:text-white transition flex items-center justify-center"
+     >
+     <svg
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       strokeWidth="2.5"
+       strokeLinecap="round"
+       className="w-9 h-9"
+       >
+       <line x1="5" y1="7" x2="19" y2="7" />
+       <line x1="5" y1="12" x2="19" y2="12" />
+       <line x1="5" y1="17" x2="19" y2="17" />
+     </svg>
+   </button>
+
+
 
       </nav>
 
