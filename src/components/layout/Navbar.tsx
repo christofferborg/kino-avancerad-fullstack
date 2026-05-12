@@ -220,7 +220,7 @@ const [menuOpen, setMenuOpen] = useState(false);
       
        {menuOpen && (
            
-       <div className="fixed inset-0 bg-black text-white flex flex-col justify-between px-4 py-34 z-[4000] md:hidden">
+       <div className="fixed inset-0 bg-black text-white flex flex-col justify-between px-4 py-27 z-[2000] md:hidden">
 
 
  
@@ -230,7 +230,14 @@ const [menuOpen, setMenuOpen] = useState(false);
        className="w-full flex items-center justify-between px-4 py-3 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
        >
        <div className="flex items-center gap-4">
-       <span>ⓘ</span>
+       
+       
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+        <circle cx="12" cy="12" r="8" />
+        <line x1="12" y1="10" x2="12" y2="16" />
+        <circle cx="12" cy="7" r="1" fill="currentColor" stroke="none" />
+      </svg>
+
 
        <span className="text-[18px] font-medium">
          Om Biografen
@@ -250,7 +257,15 @@ const [menuOpen, setMenuOpen] = useState(false);
        className="w-full flex items-center justify-between px-4 py-3 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
        >
        <div className="flex items-center gap-4">
-       <span>ⓘ</span>
+       
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+       <path d="M7 3h10l4 4v10l-4 4H7l-4-4V7z" />
+       <line x1="8" y1="16" x2="16" y2="8" />
+       <circle cx="9" cy="9" r="1" fill="currentColor" stroke="none" />
+       <circle cx="15" cy="15" r="1" fill="currentColor" stroke="none" />
+     </svg>
+
 
        <span className="text-[18px] font-medium">
          Erbjudanden
@@ -268,7 +283,15 @@ const [menuOpen, setMenuOpen] = useState(false);
        className="w-full flex items-center justify-between px-4 py-3 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
        >
        <div className="flex items-center gap-4">
-       <span>ⓘ</span>
+       
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+       <rect x="5" y="5" width="14" height="14" rx="1" />
+       <circle cx="12" cy="10" r="2.5" />
+       <path d="M8.5 16c1.5-2 5.5-2 7 0" />
+     </svg>
+
 
        <span className="text-[18px] font-medium">
          Kontakta oss
@@ -287,8 +310,19 @@ const [menuOpen, setMenuOpen] = useState(false);
        className="w-full flex items-center justify-between px-4 py-3 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
        >
        <div className="flex items-center gap-4">
-       <span>ⓘ</span>
 
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+       <path d="M7 8h10l-1.5 11h-7z" />
+       <line x1="9" y1="8" x2="10" y2="19" />
+       <line x1="12" y1="8" x2="12" y2="19" />
+       <line x1="15" y1="8" x2="14" y2="19" />
+       <circle cx="9" cy="5" r="1" fill="currentColor" stroke="none" />
+       <circle cx="12" cy="4" r="1" fill="currentColor" stroke="none" />
+       <circle cx="15" cy="5" r="1" fill="currentColor" stroke="none" />
+     </svg>
+
+ 
        <span className="text-[18px] font-medium">
         Mat & Dryck
        </span>
@@ -307,7 +341,16 @@ const [menuOpen, setMenuOpen] = useState(false);
        className="w-full flex items-center justify-between px-4 py-3 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
        >
        <div className="flex items-center gap-4">
-       <span>ⓘ</span>
+       
+       
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+       <rect x="3" y="7" width="18" height="14" rx="1" />
+       <line x1="12" y1="7" x2="12" y2="21" />
+       <line x1="3" y1="12" x2="21" y2="12" />
+       <path d="M12 7c-1.5-2-3-2-3 0" />
+       <path d="M12 7c1.5-2 3-2 3 0" />
+      </svg>
+
 
        <span className="text-[18px] font-medium">
          Presentkort
@@ -326,7 +369,13 @@ const [menuOpen, setMenuOpen] = useState(false);
        className="w-full flex items-center justify-between px-4 py-3 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
        >
        <div className="flex items-center gap-4">
-       <span>ⓘ</span>
+       
+        
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+       <circle cx="12" cy="8" r="3.5" />
+       <path d="M6 19c1.5-3 10.5-3 12 0" />
+      </svg>
+
 
        <span className="text-[18px] font-medium">
          Signup
@@ -339,14 +388,56 @@ const [menuOpen, setMenuOpen] = useState(false);
       </Link>
 
 
-
-
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="text-2xl mt-8"
+      
+      <Link
+        href="/login"
+        className="w-full flex items-center justify-between px-4 py-3 mt-10 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
        >
-          ✕
-       </button>
+       <div className="flex items-center gap-4">
+         
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+         <circle cx="12" cy="8" r="3.5" />
+         <path d="M6 19c1.5-3 10.5-3 12 0" />
+       </svg>
+
+
+         <span className="text-[18px] font-medium">
+          Logga in
+         </span>
+       </div>
+
+       <span className="text-gray-500 text-2xl">
+         ›
+       </span>
+      </Link>
+
+      <Link
+       href="#"
+        className="w-full flex items-center justify-between px-4 py-3 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
+       >
+       <div className="flex items-center gap-4">
+
+        
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
+       <path d="M12 21s6-5 6-10a6 6 0 1 0-12 0c0 5 6 10 6 10z" />
+       <circle cx="12" cy="11" r="2" />
+     </svg>
+
+
+         <span className="text-[18px] font-medium">
+          Plats
+         </span>
+       </div>
+
+         <span className="text-gray-500 text-2xl">
+           ›
+         </span>
+      </Link>
+
+
+      
+    
 
   </div>
 )}
