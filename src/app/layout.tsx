@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google"; 
 import "./globals.css";
 
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+
+
 const openSans = Open_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -22,7 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv" className={`${openSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col antialiased text-main m-8">{children}</body>
+      <body className="min-h-screen flex flex-col antialiased text-main m-8">
+        <Navbar />
+          <main className="flex-grow">
+           {children}
+         </main>
+        <Footer />
+      </body>
     </html>
   );
 }
+ 
