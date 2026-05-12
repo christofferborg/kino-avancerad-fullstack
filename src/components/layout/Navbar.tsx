@@ -363,30 +363,6 @@ const [menuOpen, setMenuOpen] = useState(false);
       </Link>        
 
 
-      
-      <Link
-       href="/#"
-       className="w-full flex items-center justify-between px-4 py-3 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
-       >
-       <div className="flex items-center gap-4">
-       
-        
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
-       <circle cx="12" cy="8" r="3.5" />
-       <path d="M6 19c1.5-3 10.5-3 12 0" />
-      </svg>
-
-
-       <span className="text-[18px] font-medium">
-         Signup
-       </span>
-       </div>
-
-       <span className="text-gray-500 text-2xl">
-        ›
-       </span>
-      </Link>
-
 
       
       <Link
