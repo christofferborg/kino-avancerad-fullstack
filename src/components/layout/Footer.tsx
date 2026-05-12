@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-      <div className="w-full rounded-md bg-zinc-900 text-white mt-8 mx-auto">
+      <div className="w-full rounded-md bg-[#0E131B] text-white mt-8 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] gap-6 md:gap-0 px-4 py-8 md:px-8 md:pb-20">
           
           <ul className="list-none m-8 bg-transparent">
