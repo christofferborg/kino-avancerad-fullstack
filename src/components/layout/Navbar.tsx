@@ -1,6 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+
 
 export default function Navbar() {
+const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="w-full bg-black md:fixed md:top-0 md:left-0 md:z-[1000] md:px-8 md:py-4">
 
@@ -128,11 +134,41 @@ export default function Navbar() {
           Events
         </Link>
 
-        <button className="text-gray-400 hover:text-white transition">
+        <button 
+         onClick={() => setMenuOpen(!menuOpen)}
+         className="text-gray-400 hover:text-white transition">
           ☰
         </button>
 
       </nav>
+
+      
+       {menuOpen && (
+         <div className="fixed inset-0 bg-[#0E131B] text-white flex flex-col items-center justify-center gap-8 z-[4000] md:hidden">
+ 
+           <Link href="/about">Om oss</Link>
+
+           <Link href="/#">Erbjudanden</Link>
+
+           <Link href="#">Kontakta oss</Link>
+
+           <Link href="/#">Mat & Dryck</Link>
+
+           <Link href="/#">Presentkort</Link>
+
+           <Link href="/#">Signup</Link>
+
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="text-2xl mt-8"
+       >
+          ✕
+       </button>
+
+  </div>
+)}
+
+
     </header>
   );
 }
