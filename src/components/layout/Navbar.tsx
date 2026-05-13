@@ -15,13 +15,14 @@ const [menuOpen, setMenuOpen] = useState(false);
       <div className="hidden md:flex items-center justify-start gap-8">
 
         <Link href="/" className="logo">
-          <Image src="/img/Exclude.png" 
-          alt="Kino" 
-          width={120} 
-          height={50} 
-          className="h-[50px] w-auto" />
-
-
+          <Image
+            src="/img/Exclude.png"
+            alt="Kino"
+            width={120}
+            height={50}
+            priority
+            style={{ width: "auto", height: "50px" }}
+           />
         </Link>
 
         <nav className="flex items-center">
