@@ -14,16 +14,18 @@ const [menuOpen, setMenuOpen] = useState(false);
       {/* Desktop Navbar */}
       <div className="hidden md:flex items-center justify-start gap-8">
 
+
         <Link href="/" className="logo">
-          <Image
+         <Image
             src="/img/Exclude.png"
             alt="Kino"
-            width={120}
-            height={50}
+            width={61}
+            height={52}
             priority
-            style={{ width: "auto", height: "50px" }}
-           />
-        </Link>
+            />
+         </Link>
+
+
 
         <nav className="flex items-center">
           <ul className="flex gap-8 list-none m-0 p-0">
