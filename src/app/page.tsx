@@ -26,7 +26,7 @@ export default function Home() {
         </h2>
       </section>
 
-      <section className="grid gap-3 md:mx-auto md:max-w-7xl md:px-4 py-2 md:grid-cols-2">
+      <section className="grid gap-6 md:mx-auto md:max-w-7xl md:px-4 py-2 md:gap-3 md:grid-cols-2">
         <Image
           src="/img/kidds.png"
           alt="Kids Movie Time"
@@ -44,7 +44,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="grid gap-3 md:mx-auto md:max-w-7xl md:px-4 py-2 md:grid-cols-2">
+      <section className="mt-5 grid gap-6 md:mx-auto md:mt-0 md:max-w-7xl md:px-4 md:gap-3 md:grid-cols-[1.7fr_0.7fr]">
         <Image
           src="/img/action.png"
           alt="Action Night"
@@ -54,7 +54,7 @@ export default function Home() {
         />
 
         <div className="bg-card px-10 py-8 md:px-5 md:py-2">
-          <h3 className="mb-4 text-center text-xl font-bold md:mb-1 md:text-left">
+          <h3 className="mb-4 text-center text-xl font-bold md:mb-1">
             Prislista
           </h3>
 
@@ -80,15 +80,15 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mt-6 text-center text-sm text-muted md:mt-2 md:text-left">
+          <p className="mt-6 text-center text-xs text-muted md:mt-2 md:text-left">
             *Andra priser gäller under evenemang.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 ">
-        <div className=" bg-card p-8 rounded-sm">
-          <h2 className="mb-6 text-center text-2xl font-bold">
+      <section className="mx-auto max-w-7xl px-4 py-6 ">
+        <div className=" bg-card p-8 rounded-sm md:py-4">
+          <h2 className="mb-6 text-center text-2xl md:py-4 font-bold">
             På Kino
           </h2>
 
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
 
           {/* DESKTOP */}
-          <div className="hidden justify-items-center gap-8 md:grid md:grid-cols-3">
+          <div className="hidden justify-items-center md:pb-12 gap-8 md:grid md:grid-cols-3">
             <ul className="space-y-2 text-main">
               <li>Restaurang</li>
               <li>Bar</li>
