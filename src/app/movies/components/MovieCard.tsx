@@ -6,7 +6,7 @@ export default function MovieCard() {
         <div className="
         flex flex-col
         bg-[var(--color-card)]
-        rounded-[1rem]
+        rounded-xl
         overflow-hidden
         max-w-[220px]
         shadow-[0_20px_60px_rgba(0,0,0,0.6)]
