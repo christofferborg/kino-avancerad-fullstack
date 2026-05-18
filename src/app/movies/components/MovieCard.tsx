@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function MovieCard() {   
     return (
 
@@ -22,8 +23,12 @@ export default function MovieCard() {
           </div>
           
           <div className="py-3 px-4">
+
+            <div className="flex items-center justify-between mb-1">
             <h2 className="text-sm font-bold mb-0.5">Pulp Fiction</h2>
-            <p className="text-sm font-semibold mb-0.5 text-gray-400">Unknown genre</p>
+            <Image src="/img/info.png" alt="info" width={16} height={16}></Image>
+            </div>
+            <h3 className="text-sm font-semibold mb-0.5 text-gray-400">Unknown genre</h3>
           </div>
 
         </div>
