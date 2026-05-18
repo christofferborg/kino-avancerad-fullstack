@@ -86,7 +86,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-6 ">
+      <section className="mx-auto max-w-7xl md:px-4 py-6 ">
         <div className=" bg-card p-8 rounded-sm md:py-4">
           <h2 className="mb-6 text-center text-2xl md:py-4 font-bold">
             På Kino
