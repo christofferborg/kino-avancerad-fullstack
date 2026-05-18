@@ -19,7 +19,7 @@ export default function Select({
         font-semibold
         text-base
         rounded-xl
-        min-w-[192px]
+        min-w-48
         h-auto
         appearance-none
         border
