@@ -4,7 +4,18 @@ import Button from "@/components/ui/Button";
 export default function MoviesPage() {
   return (
 
+<div className="max-w-fit mx-auto mb-10">
+
+<div className="flex gap-2 mb-10">
+<Button variant="tag">Senaste filmerna</Button>
+<Button variant="tag">Barnbio</Button>
+<Button variant="tag">Klassiker</Button>
+</div>
+
 <div>
+
+</div>
+
 <div
   className="
     max-w-fit
