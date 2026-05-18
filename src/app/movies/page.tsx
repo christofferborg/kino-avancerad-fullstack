@@ -4,6 +4,7 @@ import {
   DropdownMenuDay,
   DropdownMenuTime
 } from "@/app/movies/components/DropdownMenus";
+import SearchBar from "./components/SearchBar"; 
 
 export default function MoviesPage() {
   return (
@@ -16,9 +17,12 @@ export default function MoviesPage() {
 <Button variant="tag">Klassiker</Button>
 </div>
 
-<div className="flex gap-5 mb-15">
+<div className="mb-15">
+<div className="flex gap-5 mb-8">
 <DropdownMenuDay />
 <DropdownMenuTime />
+</div>
+<SearchBar />
 </div>
 
 <div
