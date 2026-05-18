@@ -1,19 +1,24 @@
 import MovieCard from "./components/MovieCard";
 import Button from "@/components/ui/Button";
+import {
+  DropdownMenuDay,
+  DropdownMenuTime
+} from "@/app/movies/components/DropdownMenus";
 
 export default function MoviesPage() {
   return (
 
 <div className="max-w-fit mx-auto mb-10">
 
-<div className="flex gap-2 mb-10">
+<div className="flex gap-2 mb-8">
 <Button variant="tag">Senaste filmerna</Button>
 <Button variant="tag">Barnbio</Button>
 <Button variant="tag">Klassiker</Button>
 </div>
 
-<div>
-
+<div className="flex gap-5 mb-15">
+<DropdownMenuDay />
+<DropdownMenuTime />
 </div>
 
 <div
