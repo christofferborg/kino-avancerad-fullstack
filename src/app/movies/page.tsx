@@ -1,9 +1,10 @@
 import MovieCard from "./components/MovieCard";
+import Button from "@/components/ui/Button";
 
 export default function MoviesPage() {
   return (
 
-
+<div>
 <div
   className="
     max-w-fit
@@ -29,6 +30,11 @@ export default function MoviesPage() {
      <MovieCard />        
      <MovieCard />
         </div>
-  
+
+  <div className="flex justify-center mt-15 mb-50">
+  <Button variant="secondary">Visa mer filmer</Button>
+  </div>
+
+  </div>
   );
 }
