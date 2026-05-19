@@ -1,6 +1,6 @@
 export default function SearchBar() {
   return (
-    <div className="relative w-full max-w-md mx-auto">
+    <div className="relative w-full lg:w-[472px]">
       <input
         type="text"
         placeholder="Sök efter filmer, genrer..."
@@ -15,7 +15,7 @@ export default function SearchBar() {
           rounded-xl
           border
           border-[var(--color-muted)]
-          min-w-101
+          min-w-10
         "
       />
 

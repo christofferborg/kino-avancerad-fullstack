@@ -9,7 +9,7 @@ import SearchBar from "./components/SearchBar";
 export default function MoviesPage() {
   return (
 
-<div className="max-w-fit mx-auto mb-10">
+<div className="mx-auto w-fit">
 
 <div className="flex gap-2 mb-8">
 <Button variant="tag">Senaste filmerna</Button>
@@ -17,25 +17,36 @@ export default function MoviesPage() {
 <Button variant="tag">Klassiker</Button>
 </div>
 
-<div className="mb-15">
-<div className="flex gap-5 mb-8">
-<DropdownMenuDay />
-<DropdownMenuTime />
-</div>
-<SearchBar />
+<div
+  className="
+    w-full
+    flex
+    flex-col
+    lg:flex-row
+    lg:items-center
+    lg:justify-between
+    gap-4
+    mb-15
+  "
+>
+  {/* Left side */}
+  <div className="flex gap-5">
+    <DropdownMenuDay />
+    <DropdownMenuTime />
+  </div>
+
+  {/* Right side */}
+  <SearchBar />
 </div>
 
 <div
   className="
-    max-w-fit
-    mx-auto
-    grid
-    grid-cols-1
-    grid-cols-2
-    sm:grid-cols-3
-    lg:grid-cols-4
-    xl:grid-cols-5
-    gap-5
+     grid
+      grid-cols-2
+      md:grid-cols-3
+      lg:grid-cols-4
+      xl:grid-cols-5
+      gap-5
   "
 >
      <MovieCard />
