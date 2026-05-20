@@ -49,7 +49,7 @@ export default function MovieCard({
         </div>
 
         <h3 className="text-sm font-semibold mb-0.5 text-gray-400">
-          {movie.Genre || "Unknown genre"}
+          {movie.Year || "Unknown year"}
         </h3>
       </div>
     </div>

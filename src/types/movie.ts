@@ -1,7 +1,7 @@
 export type Movie = {
   Title: string;
   Poster: string;
-  Genre: string[];
+  Year: string;
 };
 
 //bara för det som ska vara 

@@ -8,7 +8,7 @@ import SearchBar from "./components/SearchBar";
 
 async function getMovies() {
   const res = await fetch(
-    `https://www.omdbapi.com/?s=movie&apikey=${process.env.OMDB_API_KEY}`,
+    `https://www.omdbapi.com/?s=movie&page=1&apikey=${process.env.OMDB_API_KEY}`,
     {
       cache: "no-store",
     }
