@@ -9,21 +9,18 @@ export default function MovieCard({
   movie,
 }: MovieCardProps) {
   return (
-    <div
-      className="
-        flex flex-col
-        bg-[var(--color-card)]
-        rounded-xl
-        overflow-hidden
-        max-w-[220px]
-        shadow-[0_20px_60px_rgba(0,0,0,0.6)]
-        transition-transform
-        transition-shadow
-        duration-300
-        hover:scale-105
-        hover:shadow-[0_25px_70px_rgba(0,0,0,0.8)]
-      "
-    >
+<div
+  className="
+  flex flex-col 
+  bg-[var(--color-card)] 
+  rounded-xl overflow-hidden 
+  max-w-[220px] 
+  shadow-[0_20px_60px_rgba(0,0,0,0.6)] 
+  transition-transform transition-shadow 
+  duration-300 
+  hover:scale-105 
+  hover:shadow-[0_25px_70px_rgba(0,0,0,0.8)]"
+>
       <div>
         <Image
           className="w-full h-[272px] object-cover"

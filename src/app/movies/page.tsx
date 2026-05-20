@@ -5,23 +5,22 @@ import {
   DropdownMenuTime
 } from "@/app/movies/components/DropdownMenus";
 import SearchBar from "./components/SearchBar";
+import MoviesGrid from "./components/MoviesGrid";
 
-async function getMovies() {
+async function getMovies(page: number) {
+
   const res = await fetch(
-    `https://www.omdbapi.com/?s=movie&page=1&apikey=${process.env.OMDB_API_KEY}`,
-    {
-      cache: "no-store",
-    }
+    `https://www.omdbapi.com/?s=movie&type=movie&page=${page}&apikey=${process.env.OMDB_API_KEY}`,
   );
 
-  const data = await res.json();
+  const data = await res.json(); 
 
   return data.Search;
 }
 
 export default async function MoviesPage() {
 
-  const movies = await getMovies();
+  const initialMovies = await getMovies(1);
 
   return (
 
@@ -55,33 +54,8 @@ export default async function MoviesPage() {
         <SearchBar />
       </div>
 
-      <div
-        className="
-          grid
-          grid-cols-2
-          md:grid-cols-3
-          lg:grid-cols-4
-          xl:grid-cols-5
-          gap-5
-        "
-      >
-        <MovieCard movie={movies[0]} />
-        <MovieCard movie={movies[1]} />
-        <MovieCard movie={movies[2]} />
-        <MovieCard movie={movies[3]} />
-        <MovieCard movie={movies[4]} />
-
-        <MovieCard movie={movies[5]} />
-        <MovieCard movie={movies[6]} />
-        <MovieCard movie={movies[7]} />
-        <MovieCard movie={movies[8]} />
-        <MovieCard movie={movies[9]} />
-      </div>
-
-      <div className="flex justify-center mt-15 mb-50">
-        <Button variant="secondary">
-          Visa mer filmer
-        </Button>
+      <div>
+      <MoviesGrid initialMovies={initialMovies} />
       </div>
 
     </div>
