@@ -1,9 +1,16 @@
 import Image from "next/image";
-export default function MovieCard() {   
-    return (
+import { Movie } from "@/types/movie";
 
-        
-        <div className="
+type MovieCardProps = {
+  movie: Movie;
+};
+
+export default function MovieCard({
+  movie,
+}: MovieCardProps) {
+  return (
+    <div
+      className="
         flex flex-col
         bg-[var(--color-card)]
         rounded-xl
@@ -15,26 +22,36 @@ export default function MovieCard() {
         duration-300
         hover:scale-105
         hover:shadow-[0_25px_70px_rgba(0,0,0,0.8)]
-      ">
-        
-          <div>
-          <img className="w-full h-[272px] object-cover" 
-          src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" alt="Pulp Fiction"></img>
-          </div>
-          
-          <div className="py-3 px-4">
+      "
+    >
+      <div>
+        <Image
+          className="w-full h-[272px] object-cover"
+          src={movie.Poster}
+          alt={movie.Title}
+          width={220}
+          height={272}
+        />
+      </div>
 
-            <div className="flex items-center justify-between mb-1">
-            <h2 className="text-sm font-bold mb-0.5">Pulp Fiction</h2>
-            <Image src="/img/info.png" alt="info" width={16} height={16}></Image>
-            </div>
-            <h3 className="text-sm font-semibold mb-0.5 text-gray-400">Unknown genre</h3>
-          </div>
+      <div className="py-3 px-4">
+        <div className="flex items-center justify-between mb-1">
+          <h2 className="text-sm font-bold mb-0.5">
+            {movie.Title}
+          </h2>
 
+          <Image
+            src="/img/info.png"
+            alt="info"
+            width={16}
+            height={16}
+          />
         </div>
 
-        //TODO: Ändra bild till bildlänk när vi har datan, och img till Image?
- 
-
-    );
+        <h3 className="text-sm font-semibold mb-0.5 text-gray-400">
+          {movie.Genre || "Unknown genre"}
+        </h3>
+      </div>
+    </div>
+  );
 }
