@@ -33,11 +33,11 @@ export async function GET() {
       
       const movieObject: MovieObject = {
         id: rawData.id,
-        title: rawData.Title,
-        plot: rawData.Plot,
-        rating: rawData.imdbRating,
-        genre: rawData.Genre,
-        img: rawData.Poster,
+        title: rawData.Title || "Ingen titel tillgänglig",
+        plot: rawData.Plot || "Ingen handling tillgänglig",
+        rating: rawData.imdbRating || "-",
+        genre: rawData.Genre || "Ingen genre tillgänglig",
+        img: rawData.Poster || "Ingen poster tillgänglig",
       };
       return movieObject;
     });
