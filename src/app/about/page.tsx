@@ -5,12 +5,12 @@ export default function About () {
         <div className="mb-8 flex items-center justify-center lg:-mt-32 lg:justify-start lg:translate-y-32 lg:max-w-screen-lg lg:mx-auto">
           <img src="img/logo.png" alt="Kino logotype" />
         </div>
-        <section className="bg-card p-8 m-2 lg:max-w-screen-lg lg:mx-auto">
+        <section className="m-2 mb-8 bg-card p-8 lg:max-w-screen-lg lg:mx-auto">
           <div>
-            <h1 className="text-left font-bold text-3xl mb-6 lg:text-center lg:mt-12">
+            <h1 className="text-center font-bold text-3xl mb-6 lg:text-center lg:mt-12">
               Om oss - Kino
             </h1>
-            <p className="lg:max-w-screen-lg lg:mx-auto">
+            <p className="text-center lg:text-left lg:max-w-screen-lg lg:mx-auto">
               Välkommen till Kino – en exklusiv biograf där film möter finess
               och varje besök är noggrant utformat för att bli något utöver det
               vanliga. Kino grundades med en tydlig ambition: att skapa en
@@ -42,12 +42,12 @@ export default function About () {
             </p>
           </div>
         </section>
-        <section className="m-2 lg:max-w-screen-lg lg:mx-auto">
+        <section className="mb-8 m-2 lg:max-w-screen-lg lg:mx-auto">
           <div className="">
             <img src="img/map.png" alt="Karta över Kino" className="" />
           </div>
         </section>
-        <section className="bg-card p-8 m-2 lg:max-w-screen-lg lg:mx-auto">
+        <section className="mb-8 text-center lg:text-left bg-card p-8 m-2 lg:max-w-screen-lg lg:mx-auto">
           <div>
             <h2 className="font-bold text-2xl mb-6">Salong Atlas</h2>
             <p>
@@ -72,24 +72,24 @@ export default function About () {
             </p>
           </div>
         </section>
-        <section className="m-2 lg:flex lg:flex-row lg:max-w-screen-lg lg:mx-auto">
-          <div className="overflow-hidden lg:mr-2">
+        <section className="m-2 lg:mb-8 lg:flex lg:flex-row lg:gap-8 lg:max-w-screen-lg lg:mx-auto">
+          <div className="overflow-hidden lg:w-auto mb-8 lg:mb-0">
             <img
               src="img/salon.png"
               alt="insidan av salongen"
-              className="w-full object-cover mb-2"
+              className="w-full aspect-auto object-cover"
             />
           </div>
-          <div className="overflow-hidden lg:max-w-screen-lg lg:mx-auto">
+          <div className="mb-8 lg:mb-0 overflow-hidden lg:w-3/5 lg:content-center">
             <img
               src="img/snacks.png"
               alt="Kiosken"
-              className="w-full object-cover"
+              className="w-full object-cover aspect-auto"
             />
           </div>
         </section>
         <section className="m-2 lg:m-2 lg:mx-auto">
-          <div className="lg:max-w-screen-lg lg:mx-auto lg:overflow-hidden">
+          <div className="mb-8 lg:max-w-screen-lg lg:mx-auto lg:overflow-hidden">
             <img
               src="img/outside.png"
               alt="Kino utsida"
@@ -97,7 +97,7 @@ export default function About () {
             />
           </div>
         </section>
-        <section className="bg-card p-8 m-2 lg:max-w-screen-lg lg:mx-auto">
+        <section className="lg:text-left text-center bg-card p-8 m-2 lg:max-w-screen-lg lg:mx-auto">
           <div>
             <p>
               Det sägs att huset alltid har vetat att det en dag skulle bli en
