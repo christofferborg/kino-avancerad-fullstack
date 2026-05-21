@@ -34,3 +34,42 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Deployment
+
+Projektet är deployat med Render.
+
+Live version
+
+https://kino-avancerad-fullstack.onrender.com/
+
+## Hur projektet deployades
+Kopplade GitHub-repository till Render
+Skapade en Web Service
+Valde branch main
+
+Ställde in build- och start commands:
+
+npm install && npm run build
+npm start
+Deploy sker automatiskt vid varje push till main
+
+## Environment Variables
+
+Miljövariabler används för att hantera API-nycklar och känslig data.
+
+De sätts i Render under:
+
+Environment → Add Environment Variable
+
+Exempel:
+
+OMDB_API_KEY=********
+
+## CI/CD (automatisk deploy)
+
+Varje gång kod pushas till GitHub:
+
+Render bygger om projektet
+nya ändringar publiceras automatiskt
