@@ -3,11 +3,13 @@
 import { useState } from "react";
 import MovieCard from "./MovieCard";
 import Button from "@/components/ui/Button";
+import { Movie } from "@/types/movie";
+
 
 export default function MoviesGrid({
   initialMovies,
 }: {
-  initialMovies: any[];
+  initialMovies: Movie[];
 }) {
 
   const [movies, setMovies] = useState(initialMovies);
@@ -25,21 +27,17 @@ export default function MoviesGrid({
 
     setMovies([...movies, ...data]);
     setPage(nextPage);
-  }
 
+    console.log(movies);
+  }
+ 
   return (
     <>
-      <div className="
-      grid 
-      grid-cols-2 
-      md:grid-cols-3 
-      lg:grid-cols-4 
-      xl:grid-cols-5 
-      gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
 
         {movies.map((movie) => (
           <MovieCard
-            key={movie.imdbID}
+            key={movie.id}
             movie={movie}
           />
         ))}
@@ -55,4 +53,4 @@ export default function MoviesGrid({
       </div>
     </>
   );
-}
+} 

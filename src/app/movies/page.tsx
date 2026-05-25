@@ -1,4 +1,3 @@
-import MovieCard from "./components/MovieCard";
 import Button from "@/components/ui/Button";
 import {
   DropdownMenuDay,
@@ -7,20 +6,21 @@ import {
 import SearchBar from "./components/SearchBar";
 import MoviesGrid from "./components/MoviesGrid";
 
-async function getMovies(page: number) {
+async function getMovies() {
+  const res = await fetch("http://localhost:3000/api/movies", {
+    cache: "no-store",
+  });
 
-  const res = await fetch(
-    `https://www.omdbapi.com/?s=movie&type=movie&page=${page}&apikey=${process.env.OMDB_API_KEY}`,
-  );
+  if (!res.ok) {
+    throw new Error("Failed to fetch movies");
+  }
 
-  const data = await res.json(); 
-
-  return data.Search;
+  return res.json();
 }
 
 export default async function MoviesPage() {
 
-  const initialMovies = await getMovies(1);
+  const initialMovies = await getMovies();
 
   return (
 

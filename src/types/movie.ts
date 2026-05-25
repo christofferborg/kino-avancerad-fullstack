@@ -1,8 +1,8 @@
-export type Movie = {
-  Title: string;
-  Poster: string;
-  Year: string;
-};
-
-//bara för det som ska vara 
-// på movies-sidan änsålänge
+export interface Movie {
+  id: string;
+  title: string;
+  plot: string;
+  rating: string;
+  genre: string;
+  img: string;
+}
