@@ -32,18 +32,7 @@ export default async function MoviesPage() {
         <Button variant="tag">Klassiker</Button>
       </div>
 
-      <div
-        className="
-          w-full
-          flex
-          flex-col
-          lg:flex-row
-          lg:items-center
-          lg:justify-between
-          gap-4
-          mb-15
-        "
-      >
+      <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-15">
         {/* Left side */}
         <div className="flex gap-5">
           <DropdownMenuDay />
