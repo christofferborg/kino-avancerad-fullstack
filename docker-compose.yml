@@ -1,7 +1,7 @@
 
 services:
   db:
-    image: mysql:latest
+    image: mariadb:latest
     container_name: nextjs_mysql_db
     restart: always
     environment:
