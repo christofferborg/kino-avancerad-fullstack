@@ -21,6 +21,17 @@ export async function GET() {
     "tt1204342",
     "tt1757678",
     "tt2953050",
+    "tt17490712",
+    "tt30825738",
+    "tt30460310",
+    "tt0427340",
+    "tt15047880",
+    "tt29355505",
+    "tt8814476",
+    "tt32890033",
+    "tt27419466",
+    "tt33764258",
+    "tt22084616",
   ];
   const apiKey = process.env.OMDB_API_KEY;
 
