@@ -1,4 +1,5 @@
 import { prisma } from "@/generated";
+import Link from "next/link"
 
 export default async function Comments() {
   const comments = await prisma.comment.findMany({
@@ -11,9 +12,14 @@ export default async function Comments() {
 
   return (
     <div>
-      <h1 className="text-center font-bold text-3xl mb-6 lg:text-center lg:mt-12">
-        Recensioner
-      </h1>
+      <div className="relative flex items-center justify-center w-full">
+        <Link className="mb-4 text-3xl absolute left-4 hover:text-muted" href="/movies">
+          &lt;
+        </Link>
+        <h1 className="text-center font-bold text-3xl mb-6 lg:text-center lg:mt-12 align-center">
+          Recensioner
+        </h1>
+      </div>
       <div>
         <ul>
           {comments.map((item: any) => (
