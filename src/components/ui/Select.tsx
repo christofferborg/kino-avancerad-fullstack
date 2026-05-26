@@ -12,19 +12,8 @@ export default function Select({
       <select
         {...props}
         className={`
-        bg-[var(--color-card)]
-        text-[var(--color-main)]
-        px-4        
-        py-3
-        font-semibold
-        text-base
-        rounded-xl
-        min-w-48
-        h-auto
-        appearance-none
-        border
-        border-[var(--color-muted)]
-          ${className}
+        bg-[var(--color-card)] text-[var(--color-main)] px-4 py-3 font-semibold text-base rounded-xl min-w-52 h-auto appearance-none border border-[var(--color-muted)]
+         ${className}
         `}
       >
         {children}
