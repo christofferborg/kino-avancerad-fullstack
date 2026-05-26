@@ -24,7 +24,7 @@ export default function MovieCard({
 
       <div className="py-3 px-4">
         <div className="flex items-center justify-between mb-1">
-          <h2 className="text-sm font-bold mb-0.5">
+          <h2 className="text-sm font-bold mb-0.5 truncate">
             {movie.title}
           </h2>
 
@@ -36,7 +36,7 @@ export default function MovieCard({
           />
         </div>
 
-        <h3 className="text-sm font-semibold mb-0.5 text-gray-400">
+        <h3 className="text-sm font-semibold mb-0.5 text-gray-400 truncate">
           {movie.genre || "Unknown genre"}
         </h3>
       </div>
