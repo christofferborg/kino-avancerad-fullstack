@@ -12,15 +12,17 @@ export default function MovieCard({
     <div
       className="flex flex-col bg-[var(--color-card)] rounded-xl overflow-hidden max-w-[220px] shadow-[0_20px_60px_rgba(0,0,0,0.6)] transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-[0_25px_70px_rgba(0,0,0,0.8)]"
     >
-      <div>
-        <Image
-          className="w-full h-[272px] object-cover"
-          src={movie.img}
-          alt={movie.title}
-          width={220}
-          height={272}
-        />
-      </div>
+<div className="relative w-full h-[272px]">
+
+  <Image
+    src={movie.img}
+    alt={movie.title}
+    fill
+    className="object-cover"
+    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
+  />
+
+</div>
 
       <div className="py-3 px-4">
         <div className="flex items-center justify-between mb-1">
