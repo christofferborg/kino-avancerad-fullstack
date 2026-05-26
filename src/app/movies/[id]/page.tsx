@@ -62,7 +62,7 @@ export default async function MovieInfoPage({
           {/* Info Box */}
           <div className="bg-[#0E131B] p-8 w-[400px] rounded-[10px] lg:h-[426px]">
 
-            <p className="text-gray-400 mb-4">
+            <p className="text-yellow-500 mb-4">
               ★ {movie.rating}
             </p>
 
@@ -81,7 +81,7 @@ export default async function MovieInfoPage({
           </div>
 
           {/* Review Buttons */}
-          <button className="flex items-center justify-between bg-[#0E131B] text-white text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-[#179A90] transition">
+          <button className="flex items-center justify-between bg-[#0E131B] text-white text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-gray-400 transition">
 
             <span>Recensioner</span>
 
@@ -89,7 +89,7 @@ export default async function MovieInfoPage({
 
           </button>
 
-          <button className="flex items-center justify-between bg-[#0E131B] text-white text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-[#179A90] transition">
+          <button className="flex items-center justify-between bg-[#0E131B] text-white text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-gray-400 transition">
 
             <span>Skriv recension</span>
 
