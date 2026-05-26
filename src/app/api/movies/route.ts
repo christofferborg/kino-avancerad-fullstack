@@ -37,7 +37,7 @@ export async function GET() {
 
   try {
     const moviePromises = listOfMovieIDs.map(async (id) => {
-      const url = `http://www.omdbapi.com/?apikey=${apiKey}&i=${id}`;
+      const url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`;
       const response = await fetch(url);
       const rawData: any = await response.json();
       //console.log(rawData)

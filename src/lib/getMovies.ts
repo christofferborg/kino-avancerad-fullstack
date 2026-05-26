@@ -33,7 +33,7 @@ export async function getMovies(page = 1) {
     const rawData = await res.json();
 
     return {
-      id: rawData.imdbID,
+      id: rawData.imdbID, //gjorde om id till imdbID så det ser ut som i omdb
       title: rawData.Title,
       plot: rawData.Plot,
       rating: rawData.imdbRating,
@@ -43,4 +43,5 @@ export async function getMovies(page = 1) {
   });
 
   return Promise.all(moviePromises);
+  
 }
