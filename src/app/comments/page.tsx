@@ -10,6 +10,7 @@ export default async function Comments({
   const pageSize = 6;
   const currentPage = Number(params.page) || 1;
   const skip = (currentPage - 1) * pageSize;
+  //const {id} = await params; Denna rad aktiveras när filmsidan finns.
 
   const [comments, totalComments] = await Promise.all([
     prisma.comment.findMany({
@@ -24,8 +25,10 @@ export default async function Comments({
     <div className="w-md mx-auto lg:w-4xl xl:w-6xl">
       <div className="flex flex-row justify-between items-center w-full mb-6">
         <Link className="text-3xl hover:text-muted" href="/movies">
+          {/* Denna rad aktiveras när filmsidan finns  href={`/movies/${id}`} */}
           &lt;
         </Link>
+
         <h1 className="text-center font-bold text-3xl">Recensioner</h1>
         <div className="text-3xl invisible" aria-hidden="true">
           &lt;
