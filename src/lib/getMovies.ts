@@ -13,27 +13,30 @@ const listOfMovieIDs = [
 ];
 
 export async function getMovies(page = 1) {
-
-  const perPage = 10; //Movies per page
+  const perPage = 10;
 
   const start = (page - 1) * perPage;
   const end = start + perPage;
 
-  const paginatedIDs =
-    listOfMovieIDs.slice(start, end);
+  const paginatedIDs = listOfMovieIDs.slice(start, end);
 
   const apiKey = process.env.OMDB_API_KEY;
 
+  if (!apiKey) {
+    throw new Error("OMDB_API_KEY is missing");
+  }
+
+  const baseUrl = "https://www.omdbapi.com/";
+
   const moviePromises = paginatedIDs.map(async (id) => {
-
-    const res = await fetch(
-      `https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`
-    );
-
+    const url = `${baseUrl}?apikey=${apiKey}&i=${id}`;
+    const res = await fetch(url);
     const rawData = await res.json();
 
+    if (rawData.Response === "False") return null;
+
     return {
-      id: rawData.imdbID, //gjorde om id till imdbID så det ser ut som i omdb
+      id: rawData.imdbID,
       title: rawData.Title,
       plot: rawData.Plot,
       rating: rawData.imdbRating,
@@ -42,6 +45,7 @@ export async function getMovies(page = 1) {
     } satisfies Movie;
   });
 
-  return Promise.all(moviePromises);
-  
+  const movies = await Promise.all(moviePromises);
+
+  return movies.filter(Boolean) as Movie[];
 }
