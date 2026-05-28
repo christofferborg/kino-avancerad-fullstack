@@ -11,14 +11,18 @@ describe('Movies page', () => {
       cy.visit('/movies')
     })
 
-    it('shows initial 10 movies on load', () => {
-      cy.get('[data-cy="movie-img"]').should('have.length', 10)
-    })
+   it('shows initial 10 movies on load', () => {
+   cy.get('[data-cy="movie-img"]').should('have.length', 10)
+   cy.get('[data-cy="movie-img"]').each(($img) => {
+   expect(($img[0] as HTMLImageElement).naturalWidth).to.be.greaterThan(0)
+})
+  })
 
     it('shows static UI elements', () => {
       cy.get('button').should('contain', 'Senaste filmerna')
       cy.contains('Visa mer filmer').should('exist')
     })
+    
   })
 
 })
