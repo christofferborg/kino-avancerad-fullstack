@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cy:open:prod": "CYPRESS_BASE_URL=https://kino-avancerad-fullstack.onrender.com/ cypress open",
+    "cy:run": "cypress run",
+    "cy:run:e2e": "cypress run --e2e",
+    "cy:run:component": "cypress run --component"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

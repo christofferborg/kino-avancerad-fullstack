@@ -101,3 +101,13 @@ Komponenttesterna använder mock-data för att säkerställa att komponenterna f
 - Att knappen försvinner när alla filmer visats
 - Att knappen inte visas när färre än 10 filmer finns
 - Att sista filmen laddas korrekt när färre än 10 filmer återstår
+
+## Testkommandon
+
+| Kommando | Beskrivning |
+|---|---|
+| `npm run cypress:open` | Öppnar Cypress UI för lokal testning (port 3000) |
+| `npm run cy:open:prod` | Öppnar Cypress UI mot den deploy:ade sidan |
+| `npm run cy:run` | Kör alla tester headless i terminalen |
+| `npm run cy:run:e2e` | Kör endast E2E-tester i terminalen |
+| `npm run cy:run:component` | Kör endast komponenttester i terminalen |
