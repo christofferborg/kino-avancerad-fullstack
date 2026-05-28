@@ -90,7 +90,7 @@ const [menuOpen, setMenuOpen] = useState(false);
                 </li>
 
                 <li className="p-2">
-                  <Link href="/signup" className="text-gray-400 hover:text-white">
+                  <Link href="/#" className="text-gray-400 hover:text-white">
                     Signup
                   </Link>
                 </li>
@@ -103,7 +103,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
         <div className="ml-auto flex items-center gap-4">
           <Link
-            href="/login"
+            href="/#"
             className="text-gray-400 hover:text-white transition"
           >
             Logga in
