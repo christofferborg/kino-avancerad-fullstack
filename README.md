@@ -73,3 +73,31 @@ Varje gång kod pushas till GitHub:
 
 Render bygger om projektet
 nya ändringar publiceras automatiskt
+
+## Teststrategi
+
+Testningen sker med hjälp av Cypress och består av E2E-tester och komponenttester.
+Testerna är centrerade kring filmsidan, som innehåller en lista av filmer i form av filmkort.
+Eftersom all funktionalitet inte finns än, testar testerna bara det som är implementerat än så länge.
+
+### E2E-tester
+E2E-testerna använder den faktiska datan från API:et och testar följande:
+- Navigering till filmsidan via navbar
+- Att 10 filmer visas vid sidladdning
+- Att filmbilderna laddar korrekt
+- Att statiskt innehåll visas korrekt
+
+### Komponenttester
+Komponenttesterna använder mock-data för att säkerställa att komponenterna fungerar självständigt.
+
+**MovieCard**
+- Att filmens bild renderas med korrekt src och alt-attribut
+- Att filmens titel renderas
+- Att filmens genre renderas
+
+**MoviesGrid**
+- Att endast 10 filmer visas initialt
+- Att 10 fler filmer laddas när "Visa mer filmer" klickas
+- Att knappen försvinner när alla filmer visats
+- Att knappen inte visas när färre än 10 filmer finns
+- Att sista filmen laddas korrekt när färre än 10 filmer återstår

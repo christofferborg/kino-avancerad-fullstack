@@ -20,7 +20,17 @@ describe('Movies page', () => {
 
     it('shows static UI elements', () => {
       cy.get('button').should('contain', 'Senaste filmerna')
+      cy.get('button').should('contain', 'Barnbio')
+      cy.get('button').should('contain', 'Klassiker')
+
+      cy.get('select').should('contain', 'Välj dag')
+      cy.get('select').should('contain', 'Välj tid')
+      
+      cy.get('input[type="search"], input[type="text"]')
+      .should('have.attr', 'placeholder', 'Sök efter filmer, genrer...')
+      
       cy.contains('Visa mer filmer').should('exist')
+      
     })
     
   })
