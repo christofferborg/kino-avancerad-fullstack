@@ -24,15 +24,13 @@ async function getMovies() {
 export default async function MovieInfoPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
 
   const { id } = await params;
 
   const movies: MovieObject[] = await getMovies();
 
-  console.log(params.id);
-  console.log(movies);
 
   const movie = movies.find(
     (movie) => movie.id === id
@@ -53,6 +51,7 @@ export default async function MovieInfoPage({
           alt={movie.title}
           width={400}
           height={600}
+          loading="eager"
           className="w-[400px] h-[600px] object-cover rounded-[10px]"
         />
 
@@ -60,28 +59,28 @@ export default async function MovieInfoPage({
         <div className="flex flex-col items-center">
 
           {/* Info Box */}
-          <div className="bg-[#0E131B] p-8 w-[400px] rounded-[10px] lg:h-[426px]">
+          <div className="bg-card p-8 w-[400px] rounded-[10px] lg:h-[426px]">
 
-            <p className="text-yellow-500 mb-4">
-              ★ {movie.rating}
+            <p className="text-white mb-4">
+               ⭐️ {movie.rating}
             </p>
 
             <h1 className="text-4xl font-bold mb-4">
               {movie.title}
             </h1>
 
-            <p className="text-gray-400 mb-6">
+            <p className="text-muted mb-4 ">
               {movie.genre}
             </p>
 
-            <p className="text-white leading-8">
+            <p className="text-main leading-8">
               {movie.plot}
             </p>
 
           </div>
 
           {/* Review Buttons */}
-          <button className="flex items-center justify-between bg-[#0E131B] text-white text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-gray-400 transition">
+          <button className="flex items-center justify-between bg-card text-main text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-muted transition">
 
             <span>Recensioner</span>
 
@@ -89,7 +88,7 @@ export default async function MovieInfoPage({
 
           </button>
 
-          <button className="flex items-center justify-between bg-[#0E131B] text-white text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-gray-400 transition">
+          <button className="flex items-center justify-between bg-card text-main text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-muted transition">
 
             <span>Skriv recension</span>
 
