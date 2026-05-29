@@ -1,7 +1,7 @@
 import { Movie } from "@/types/movie";
 
 const listOfMovieIDs = [
-    "tt0110912",
+  "tt0110912",
     "tt0109830",
     "tt0068646",
     "tt0105665",
@@ -24,24 +24,15 @@ const listOfMovieIDs = [
     "tt22084616",
 ];
 
-export async function getMovies(page = 1) {
-  const perPage = 10;
-
-  const start = (page - 1) * perPage;
-  const end = start + perPage;
-
-  const paginatedIDs = listOfMovieIDs.slice(start, end);
-
+export async function getMovies() {
   const apiKey = process.env.OMDB_API_KEY;
 
   if (!apiKey) {
     throw new Error("OMDB_API_KEY is missing");
   }
 
-  const baseUrl = "https://www.omdbapi.com/";
-
-  const moviePromises = paginatedIDs.map(async (id) => {
-    const url = `${baseUrl}?apikey=${apiKey}&i=${id}`;
+  const moviePromises = listOfMovieIDs.map(async (id) => {
+    const url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`;
     const res = await fetch(url);
     const rawData = await res.json();
 
