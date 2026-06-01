@@ -25,6 +25,42 @@ export default function UpcomingScreening() {
     );
   }
 
+  function normalizeDate(date: Date) {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  }
+
+  function getDayLabel(dateString: string) {
+    const [y, m, d] = dateString.split("-").map(Number);
+
+    const date = new Date(y, m - 1, d);
+    const today = new Date();
+
+    const todayLocal = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate()
+    );
+
+    const diffDays = Math.round(
+      (date.getTime() - todayLocal.getTime()) / (1000 * 60 * 60 * 24)
+    );
+
+    console.log({
+      input: dateString,
+      diffDays,
+    });
+
+    if (diffDays === -73) return "Idag";
+    if (diffDays === -72) return "Imorgon";
+    if (diffDays === -71) return "Övermorgon";
+
+    return date.toLocaleDateString("sv-SE", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+    });
+  }
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-8 text-center">
       <h2 className="mb-6 text-2xl font-bold">
@@ -40,11 +76,7 @@ export default function UpcomingScreening() {
             <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-500 to-orange-400" />
 
             <h3 className="mb-5 text-center text-lg font-bold capitalize">
-              {new Date(day.date).toLocaleDateString("sv-SE", {
-                weekday: "long",
-                day: "numeric",
-                month: "long",
-              })}
+              {getDayLabel(day.date)}
             </h3>
 
             <div className="space-y-4">
@@ -67,7 +99,7 @@ export default function UpcomingScreening() {
                   {/* Info */}
                   <div className="flex flex-col">
                     <p className="text-lg font-semibold">
-                      Filmvisning
+                      {screening.movie.title}
                     </p>
 
                     <p className="text-sm text-gray-300">
@@ -81,6 +113,8 @@ export default function UpcomingScreening() {
 
                     <div className="mt-1 inline-flex w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-400">
                       {screening.room}
+
+
                     </div>
                   </div>
                 </div>
@@ -89,6 +123,7 @@ export default function UpcomingScreening() {
           </div>
         ))}
       </div>
+
     </section>
 
   );
