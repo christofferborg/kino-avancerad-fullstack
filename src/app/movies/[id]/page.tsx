@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface MovieObject {
   id: string;
@@ -82,7 +83,7 @@ export default async function MovieInfoPage({
           {/* Review Buttons */}
           <button className="flex items-center justify-between bg-card text-main text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-muted transition">
 
-            <span>Recensioner</span>
+            <Link href={`/movies/${id}/comments`}>Recensioner</Link>
 
             <span>›</span>
 
