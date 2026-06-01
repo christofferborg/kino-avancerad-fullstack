@@ -66,14 +66,14 @@ export default function UpcomingScreening() {
       <h2 className="mb-6 text-2xl font-bold">
         Kommande visningar
       </h2>
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-3">
         {data.days.map((day: any) => (
           <div
             key={day.date}
             className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#11151d] p-5 shadow-2xl"
           >
             {/* Gradient bar */}
-            <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-500 to-orange-400" />
+            <div className="absolute left-0 top-0 h-full w-1 bg-secondary" />
 
             <h3 className="mb-5 text-center text-lg font-bold capitalize">
               {getDayLabel(day.date)}
@@ -98,11 +98,11 @@ export default function UpcomingScreening() {
 
                   {/* Info */}
                   <div className="flex flex-col">
-                    <p className="text-lg font-semibold">
+                    <p className="text-lg font-semibold text-main">
                       {screening.movie.title}
                     </p>
 
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-muted">
                       {new Date(
                         screening.startsAt
                       ).toLocaleTimeString("sv-SE", {
@@ -111,7 +111,7 @@ export default function UpcomingScreening() {
                       })}
                     </p>
 
-                    <div className="mt-1 inline-flex w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-400">
+                    <div className="text-xs text-muted">
                       {screening.room}
 
 
