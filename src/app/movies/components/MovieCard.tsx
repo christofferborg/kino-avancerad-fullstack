@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Movie } from "@/types/movie";
+import Link from "next/link";
 
 type Props = {
   movie: Movie;
@@ -9,9 +10,11 @@ export default function MovieCard({
   movie,
 }: Props) {
   return (
-    <div
+    <Link
+      href={`/movies/${movie.id}`}
       className="flex flex-col bg-[var(--color-card)] rounded-xl overflow-hidden max-w-[220px] shadow-[0_20px_60px_rgba(0,0,0,0.6)] transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-[0_25px_70px_rgba(0,0,0,0.8)]"
     >
+
 <div className="relative w-full h-[272px]">
 
   <Image
@@ -43,6 +46,8 @@ export default function MovieCard({
           {movie.genre || "Unknown genre"}
         </h3>
       </div>
-    </div>
+    
+
+    </Link>
   );
 }
