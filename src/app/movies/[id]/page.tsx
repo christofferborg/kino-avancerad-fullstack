@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getMovies } from "@/lib/getMovies";
 
 interface MovieObject {
   id: string;
@@ -9,17 +10,7 @@ interface MovieObject {
   img: string;
 }
 
-async function getMovies() {
-  const res = await fetch("http://localhost:3000/api/movies", {
-    cache: "no-store",
-  });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch movies");
-  }
-
-  return res.json();
-}
 
 export default async function MovieInfoPage({
   params,
