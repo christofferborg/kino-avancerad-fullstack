@@ -43,6 +43,7 @@ const [menuOpen, setMenuOpen] = useState(false);
             <li>
               <Link
                 href="/movies"
+                data-cy="movies-link"
                 className="text-gray-400 hover:text-white transition"
               >
                

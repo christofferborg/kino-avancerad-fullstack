@@ -6,7 +6,12 @@
     "dev": "docker compose up -d && npx prisma migrate dev && next dev --webpack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cypress:open": "cypress open",
+    "cy:open:prod": "CYPRESS_BASE_URL=https://kino-avancerad-fullstack.onrender.com/ cypress open",
+    "cy:run": "cypress run",
+    "cy:run:e2e": "cypress run --e2e",
+    "cy:run:component": "cypress run --component"
   },
   "dependencies": {
     "@prisma/adapter-mariadb": "^7.8.0",
@@ -25,6 +30,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "cypress": "^15.16.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "prisma": "^7.8.0",
