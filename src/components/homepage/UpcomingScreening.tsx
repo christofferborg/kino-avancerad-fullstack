@@ -19,9 +19,29 @@ export default function UpcomingScreening() {
   if (!data) {
     return (
       <div className="grid gap-4 md:grid-cols-2">
-        <div className="h-24 animate-pulse bg-white/5 rounded-xl" />
-        <div className="h-24 animate-pulse bg-white/5 rounded-xl" />
+        <div className="h-24 animate-pulse bg-main rounded-xl" />
+        <div className="h-24 animate-pulse bg-main rounded-xl" />
       </div>
+    );
+  }
+
+  if (data.days.length === 0) {
+    return (
+      <section className="mx-auto max-w-7xl px-4 py-8 text-center">
+        <h2 className="mb-6 text-2xl font-bold">
+          Kommande visningar
+        </h2>
+
+        <div className="rounded-2xl border border-dashed border-muted bg-card p-8">
+          <h3 className="text-xl font-bold text-main">
+            Inga kommande visningar
+          </h3>
+
+          <p className="mt-2 text-muted">
+            Kolla gärna igen senare – vi uppdaterar löpande.
+          </p>
+        </div>
+      </section>
     );
   }
 
@@ -50,9 +70,9 @@ export default function UpcomingScreening() {
       diffDays,
     });
 
-    if (diffDays === -73) return "Idag";
-    if (diffDays === -72) return "Imorgon";
-    if (diffDays === -71) return "Övermorgon";
+    if (diffDays === -74) return "Idag";
+    if (diffDays === -73) return "Imorgon";
+    if (diffDays === -72) return "Övermorgon";
 
     return date.toLocaleDateString("sv-SE", {
       weekday: "long",
@@ -70,7 +90,7 @@ export default function UpcomingScreening() {
         {data.days.map((day: any) => (
           <div
             key={day.date}
-            className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#11151d] p-5 shadow-2xl"
+            className="relative overflow-hidden rounded-2xl border border-main/10 bg-card p-5 shadow-2xl"
           >
             {/* Gradient bar */}
             <div className="absolute left-0 top-0 h-full w-1 bg-secondary" />
@@ -83,10 +103,10 @@ export default function UpcomingScreening() {
               {day.screenings.map((screening: any) => (
                 <div
                   key={screening.id}
-                  className="flex items-center gap-4 border-t border-white/10 pt-4 first:border-none first:pt-0"
+                  className="flex items-center gap-4 border-t border-main/10 pt-4 first:border-none first:pt-0"
                 >
                   {/* Poster placeholder */}
-                  <div className="relative h-[84px] w-[56px] overflow-hidden rounded-xl border border-white/10">
+                  <div className="relative h-[84px] w-[56px] overflow-hidden rounded-xl border border-main/10">
                     <Image
                       src={screening.movie.poster}
                       alt={screening.movie?.title ?? "Film poster"}
@@ -102,7 +122,7 @@ export default function UpcomingScreening() {
                       {screening.movie.title}
                     </p>
 
-                    <p className="text-sm text-muted">
+                    <p className="text-sm text-muted text-left">
                       {new Date(
                         screening.startsAt
                       ).toLocaleTimeString("sv-SE", {
@@ -111,8 +131,8 @@ export default function UpcomingScreening() {
                       })}
                     </p>
 
-                    <div className="text-xs text-muted">
-                      {screening.room}
+                    <div className="text-xs text-muted text-left">
+                      <p>Salong Atlas</p>
 
 
                     </div>
