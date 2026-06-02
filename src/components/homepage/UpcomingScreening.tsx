@@ -18,10 +18,13 @@ export default function UpcomingScreening() {
 
   if (!data) {
     return (
-      <div className="grid gap-4 md:grid-cols-2">
-        <div className="h-24 animate-pulse bg-main rounded-xl" />
-        <div className="h-24 animate-pulse bg-main rounded-xl" />
-      </div>
+      <section className="mx-auto max-w-7xl px-4 py-8">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="h-24 animate-pulse bg-card rounded-xl" />
+          <div className="h-24 animate-pulse bg-card rounded-xl" />
+          <div className="h-24 animate-pulse bg-card rounded-xl" />
+        </div>
+      </section>
     );
   }
 
@@ -45,10 +48,6 @@ export default function UpcomingScreening() {
     );
   }
 
-  function normalizeDate(date: Date) {
-    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
-  }
-
   function getDayLabel(dateString: string) {
     const [y, m, d] = dateString.split("-").map(Number);
 
@@ -64,11 +63,6 @@ export default function UpcomingScreening() {
     const diffDays = Math.round(
       (date.getTime() - todayLocal.getTime()) / (1000 * 60 * 60 * 24)
     );
-
-    console.log({
-      input: dateString,
-      diffDays,
-    });
 
     if (diffDays === -74) return "Idag";
     if (diffDays === -73) return "Imorgon";
