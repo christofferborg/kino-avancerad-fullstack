@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getMovies } from "@/lib/getMovies";
+import ReviewModal from "@/components/ReviewModal";
 import Link from "next/link";
 
 
@@ -35,9 +36,7 @@ export default async function MovieInfoPage({
 
   return (
     <section className="flex justify-center px-4 mb-[200px]">
-
       <div className="flex flex-col lg:flex-row gap-4 items-center mx-auto">
-
         {/* Poster */}
         <Image
           src={movie.img}
@@ -50,49 +49,31 @@ export default async function MovieInfoPage({
 
         {/* Right Side */}
         <div className="flex flex-col items-center">
-
           {/* Info Box */}
           <div className="bg-card p-8 w-[400px] rounded-[10px] lg:h-[426px]">
+            <p className="text-white mb-4">⭐️ {movie.rating}</p>
 
-            <p className="text-white mb-4">
-               ⭐️ {movie.rating}
-            </p>
+            <h1 className="text-4xl font-bold mb-4">{movie.title}</h1>
 
-            <h1 className="text-4xl font-bold mb-4">
-              {movie.title}
-            </h1>
+            <p className="text-muted mb-4 ">{movie.genre}</p>
 
-            <p className="text-muted mb-4 ">
-              {movie.genre}
-            </p>
-
-            <p className="text-main leading-8">
-              {movie.plot}
-            </p>
-
+            <p className="text-main leading-8">{movie.plot}</p>
           </div>
 
           {/* Review Buttons */}
           <button className="flex items-center justify-between bg-card text-main text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-muted transition">
 
-            <Link href={`/movies/${id}/comments`}>Recensioner</Link>
+            <span>Recensioner</span>
 
             <span>›</span>
-
           </button>
 
-          <button className="flex items-center justify-between bg-card text-main text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-muted transition">
+            <ReviewModal movieId={id} />
 
-            <span>Skriv recension</span>
-
-            <span>›</span>
-
-          </button>
-
+       
+         
         </div>
-
       </div>
-
     </section>
   );
 }
