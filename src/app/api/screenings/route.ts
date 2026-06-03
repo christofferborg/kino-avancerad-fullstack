@@ -5,7 +5,7 @@ export async function GET() {
     // DAY 1
     {
       id: 1,
-      startsAt: "2026-05-27T15:00:00Z",
+      startsAt: "2026-05-27T15:00:00",
       room: "Salong Atlas",
       movie: {
         title: "Moana",
@@ -15,7 +15,7 @@ export async function GET() {
     },
     {
       id: 2,
-      startsAt: "2026-05-27T18:30:00Z",
+      startsAt: "2026-05-27T18:30:00",
       room: "Salong Lumiére",
       movie: {
         title: "Pulp Fiction",
@@ -25,7 +25,7 @@ export async function GET() {
     },
     {
       id: 3,
-      startsAt: "2026-05-27T20:00:00Z",
+      startsAt: "2026-05-27T20:00:00",
       room: "Salong Bijou",
       movie: {
         title: "The Godfather",
@@ -35,7 +35,7 @@ export async function GET() {
     },
     {
       id: 4,
-      startsAt: "2026-05-27T21:15:00Z",
+      startsAt: "2026-05-27T21:15:00",
       room: "Salong Lumiére",
       movie: {
         title: "Spider-Man: Brand New Day",
@@ -47,7 +47,7 @@ export async function GET() {
     // DAY 2
     {
       id: 5,
-      startsAt: "2026-05-28T16:00:00Z",
+      startsAt: "2026-05-28T16:00:00",
       room: "Salong Atlas",
       movie: {
         title: "Avatar: Fire and Ash",
@@ -57,7 +57,7 @@ export async function GET() {
     },
     {
       id: 6,
-      startsAt: "2026-05-28T18:30:00Z",
+      startsAt: "2026-05-28T18:30:00",
       room: "Salong Bijou",
       movie: {
         title: "The Odyssey",
@@ -67,7 +67,7 @@ export async function GET() {
     },
     {
       id: 7,
-      startsAt: "2026-05-28T20:00:00Z",
+      startsAt: "2026-05-28T20:00:00",
       room: "Salong Bijou",
       movie: {
         title: "Moana",
@@ -77,7 +77,7 @@ export async function GET() {
     },
     {
       id: 8,
-      startsAt: "2026-05-28T22:30:00Z",
+      startsAt: "2026-05-28T21:30:00",
       room: "Salong Lumiére",
       movie: {
         title: "The Godfather",
@@ -89,7 +89,7 @@ export async function GET() {
   
     {
       id: 9,
-      startsAt: "2026-05-29T15:30:00Z",
+      startsAt: "2026-05-29T15:30:00",
       room: "Salong Atlas",
       movie: {
         title: "Spider-Man: Brand New Day",
@@ -99,7 +99,7 @@ export async function GET() {
     },
     {
       id: 10,
-      startsAt: "2026-05-29T18:00:00Z",
+      startsAt: "2026-05-29T18:00:00",
       room: "Salong Bijou",
       movie: {
         title: "Pulp Fiction",
@@ -109,7 +109,7 @@ export async function GET() {
     },
     {
       id: 11,
-      startsAt: "2026-05-29T20:30:00Z",
+      startsAt: "2026-05-29T20:30:00",
       room: "Salong Lumiére",
       movie: {
         title: "Avatar: Fire and Ash",
@@ -119,7 +119,7 @@ export async function GET() {
     },
     {
       id: 12,
-      startsAt: "2026-05-29T23:00:00Z",
+      startsAt: "2026-05-29T21:00:00",
       room: "Salong Atlas",
       movie: {
         title: "The Odyssey",

@@ -50,11 +50,13 @@ export default function UpcomingScreenings() {
 
   if (!data) {
     return (
-      <div className="grid gap-4 md:grid-cols-3">
-        <div className="h-24 animate-pulse bg-white/5 rounded-xl" />
-        <div className="h-24 animate-pulse bg-white/5 rounded-xl" />
-        <div className="h-24 animate-pulse bg-white/5 rounded-xl" />
-      </div>
+      <section className="mx-auto max-w-7xl px-4 py-8">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="h-[320px] animate-pulse bg-card rounded-2xl" />
+          <div className="h-[320px] animate-pulse bg-card rounded-2xl" />
+          <div className="h-[320px] animate-pulse bg-card rounded-2xl" />
+        </div>
+      </section>
     );
   }
 
@@ -69,7 +71,7 @@ export default function UpcomingScreenings() {
           return (
             <div
               key={label}
-              className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#11151d] p-5 shadow-2xl"
+              className="relative overflow-hidden rounded-2xl border border-main/10 bg-card p-5 shadow-2xl"
             >
               <div className="absolute left-0 top-0 h-full w-1 bg-secondary" />
 
@@ -87,9 +89,9 @@ export default function UpcomingScreenings() {
                   {day.screenings.map((s) => (
                     <div
                       key={s.id}
-                      className="flex items-center gap-4 border-t border-white/10 pt-4 first:border-none first:pt-0"
+                      className="flex items-center gap-4 border-t border-main/10 pt-4 first:border-none first:pt-0"
                     >
-                      <div className="relative h-[84px] w-[56px] overflow-hidden rounded-xl border border-white/10">
+                      <div className="relative h-[84px] w-[56px] overflow-hidden rounded-xl border border-main/10">
                         <Image
                           src={s.movie.poster}
                           alt={s.movie.title}
