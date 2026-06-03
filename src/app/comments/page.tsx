@@ -1,4 +1,4 @@
-import { prisma } from "@/generated";
+import { Prisma } from "@/generated";
 import Link from "next/link";
 
 export default async function Comments({
