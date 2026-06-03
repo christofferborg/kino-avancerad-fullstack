@@ -43,6 +43,7 @@ const [menuOpen, setMenuOpen] = useState(false);
             <li>
               <Link
                 href="/movies"
+                data-cy="movies-link"
                 className="text-gray-400 hover:text-white transition"
               >
                
@@ -78,7 +79,7 @@ const [menuOpen, setMenuOpen] = useState(false);
                 </li>
 
                 <li className="p-2">
-                  <Link href="#" className="text-gray-400 hover:text-white">
+                  <Link href="/mat-dryck" className="text-gray-400 hover:text-white">
                     Mat & Dryck
                   </Link>
                 </li>
@@ -312,7 +313,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
       <Link
-       href="/#"
+       href="/mat-dryck"
        className="w-full flex items-center justify-between px-4 py-3 rounded-[5px] hover:bg-[#0E131B] active:bg-[#0E131B] transition"
        >
        <div className="flex items-center gap-4">
