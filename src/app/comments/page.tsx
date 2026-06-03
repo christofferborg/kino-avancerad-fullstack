@@ -1,6 +1,5 @@
-import { prisma } from "@/generated";
+import { prisma } from "@/db";
 import Link from "next/link";
-
 export default async function Comments({
   searchParams,
 }: {
