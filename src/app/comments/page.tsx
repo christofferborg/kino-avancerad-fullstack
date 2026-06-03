@@ -1,6 +1,6 @@
-import { Prisma } from "@/generated";
+import { PrismaClient } from "@/generated";
 import Link from "next/link";
-
+const prisma = new PrismaClient();
 export default async function Comments({
   searchParams,
 }: {
