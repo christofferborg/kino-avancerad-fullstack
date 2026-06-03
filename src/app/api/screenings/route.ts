@@ -89,7 +89,7 @@ export async function GET() {
   
     {
       id: 9,
-      startsAt: "2026-05-28T15:30:00Z",
+      startsAt: "2026-05-29T15:30:00Z",
       room: "Salong Atlas",
       movie: {
         title: "Spider-Man: Brand New Day",
@@ -119,7 +119,7 @@ export async function GET() {
     },
     {
       id: 12,
-      startsAt: "2026-05-28T23:00:00Z",
+      startsAt: "2026-05-29T23:00:00Z",
       room: "Salong Atlas",
       movie: {
         title: "The Odyssey",
