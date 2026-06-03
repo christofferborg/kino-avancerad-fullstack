@@ -1,4 +1,4 @@
-import "dotenv/config"; // DETTA KRÄVS I PRISMA 7 FÖR ATT LÄSA .ENV LOKALT
+import "dotenv/config";
 import { defineConfig, env } from "prisma/config";
 
 export default defineConfig({
@@ -7,6 +7,6 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: env("DATABASE_URL"), // Hämtar din Postgres-sträng
+    url: env("DATABASE_URL"), 
   },
 });
