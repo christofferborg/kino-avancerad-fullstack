@@ -44,7 +44,7 @@ export default function ReviewModal({movieId}: ReviewModalProps) {
       <>
         <button
           onClick={() => setIsOpen(true)}
-          className="flex items-center justify-between bg-card text-main text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-muted transition"
+          className="flex items-center justify-between bg-card text-main text-left text-base h-[72px] w-[400px] mt-4 px-8 rounded-[10px] hover:text-muted transition cursor-pointer"
         >
           <span>Skriv recension</span>
           <span>›</span>
@@ -65,8 +65,8 @@ export default function ReviewModal({movieId}: ReviewModalProps) {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  className="w-9 h-10 stroke-current" // Styr storleken på vektorn och ärver textfärgen
-                  strokeWidth="2.5" // HÄR STYR DU EXAKT HUR TJOCKA LINJERNA SKA VARA!
+                  className="w-9 h-10 stroke-current" 
+                  strokeWidth="2.5" 
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
