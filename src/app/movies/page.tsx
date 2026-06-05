@@ -6,7 +6,7 @@ import {
 import SearchBar from "./components/SearchBar";
 import MoviesGrid from "./components/MoviesGrid";
 import { getMovies } from "@/lib/getMovies";
-
+export const dynamic = "force-dynamic";
 export default async function MoviesPage() {
 
   const initialMovies = await getMovies();
