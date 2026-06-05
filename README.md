@@ -35,6 +35,23 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+## Lokal utveckling med Docker
+
+Applikationen och dess PostgreSQL-databas är helt containeriserade och konfigurerade för att köras i en isolerad miljö via Docker Compose. Följ dessa två steg för att starta systemet lokalt från grunden:
+
+## 1. Starta Docker
+Säkerställ att Docker Desktop är igång. Kör sedan följande kommando i projektets rotmapp för att bygga och starta Next.js-servern och databasen:
+
+```bash
+docker compose up --build
+```
+
+## 2. Initiera databasen
+När containrarna är igång och Next.js-loggarna visar att servern är redo (✓ Ready in 0ms), öppna en ny flik eller ett nytt fönster i din terminal och initiera databasschemat med Prisma:
+
+```bash
+npx prisma migrate dev
+```
 
 ## Deployment
 
